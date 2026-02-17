@@ -1,0 +1,265 @@
+{
+  "_comment": "PLACEHOLDER PRICING — Replace with actual rates from HD",
+  "materials": [
+    {
+      "name": "Steel",
+      "gauges": [
+        {
+          "label": "22ga",
+          "thickness_in": 0.0299,
+          "sheets": {
+            "48x120": 65.00,
+            "60x120": 81.00,
+            "48x96": 52.00,
+            "60x96": 65.00
+          },
+          "cut_rate_per_inch": 0.08
+        },
+        {
+          "label": "20ga",
+          "thickness_in": 0.0359,
+          "sheets": {
+            "48x120": 72.00,
+            "60x120": 90.00,
+            "48x96": 58.00,
+            "60x96": 72.00
+          },
+          "cut_rate_per_inch": 0.09
+        },
+        {
+          "label": "18ga",
+          "thickness_in": 0.0478,
+          "sheets": {
+            "48x120": 80.00,
+            "60x120": 100.00,
+            "48x96": 64.00,
+            "60x96": 80.00
+          },
+          "cut_rate_per_inch": 0.10
+        },
+        {
+          "label": "16ga",
+          "thickness_in": 0.0598,
+          "sheets": {
+            "48x120": 95.00,
+            "60x120": 119.00,
+            "48x96": 76.00,
+            "60x96": 95.00
+          },
+          "cut_rate_per_inch": 0.12
+        },
+        {
+          "label": "14ga",
+          "thickness_in": 0.0747,
+          "sheets": {
+            "48x120": 115.00,
+            "60x120": 144.00,
+            "48x96": 92.00,
+            "60x96": 115.00
+          },
+          "cut_rate_per_inch": 0.14
+        },
+        {
+          "label": "12ga",
+          "thickness_in": 0.1046,
+          "sheets": {
+            "48x120": 140.00,
+            "60x120": 175.00,
+            "48x96": 112.00,
+            "60x96": 140.00
+          },
+          "cut_rate_per_inch": 0.18
+        },
+        {
+          "label": "10ga",
+          "thickness_in": 0.1345,
+          "sheets": {
+            "48x120": 175.00,
+            "60x120": 219.00,
+            "48x96": 140.00,
+            "60x96": 175.00
+          },
+          "cut_rate_per_inch": 0.22
+        }
+      ]
+    },
+    {
+      "name": "Aluminum",
+      "gauges": [
+        {
+          "label": "20ga",
+          "thickness_in": 0.032,
+          "sheets": {
+            "48x120": 95.00,
+            "60x120": 119.00,
+            "48x96": 76.00,
+            "60x96": 95.00
+          },
+          "cut_rate_per_inch": 0.07
+        },
+        {
+          "label": "18ga",
+          "thickness_in": 0.040,
+          "sheets": {
+            "48x120": 110.00,
+            "60x120": 138.00,
+            "48x96": 88.00,
+            "60x96": 110.00
+          },
+          "cut_rate_per_inch": 0.08
+        },
+        {
+          "label": "16ga",
+          "thickness_in": 0.051,
+          "sheets": {
+            "48x120": 130.00,
+            "60x120": 163.00,
+            "48x96": 104.00,
+            "60x96": 130.00
+          },
+          "cut_rate_per_inch": 0.10
+        },
+        {
+          "label": "14ga",
+          "thickness_in": 0.064,
+          "sheets": {
+            "48x120": 155.00,
+            "60x120": 194.00,
+            "48x96": 124.00,
+            "60x96": 155.00
+          },
+          "cut_rate_per_inch": 0.12
+        },
+        {
+          "label": "12ga",
+          "thickness_in": 0.081,
+          "sheets": {
+            "48x120": 190.00,
+            "60x120": 238.00,
+            "48x96": 152.00,
+            "60x96": 190.00
+          },
+          "cut_rate_per_inch": 0.15
+        }
+      ]
+    },
+    {
+      "name": "Stainless Steel",
+      "gauges": [
+        {
+          "label": "22ga",
+          "thickness_in": 0.0299,
+          "sheets": {
+            "48x120": 120.00,
+            "60x120": 150.00,
+            "48x96": 96.00,
+            "60x96": 120.00
+          },
+          "cut_rate_per_inch": 0.12
+        },
+        {
+          "label": "20ga",
+          "thickness_in": 0.0359,
+          "sheets": {
+            "48x120": 140.00,
+            "60x120": 175.00,
+            "48x96": 112.00,
+            "60x96": 140.00
+          },
+          "cut_rate_per_inch": 0.14
+        },
+        {
+          "label": "18ga",
+          "thickness_in": 0.0478,
+          "sheets": {
+            "48x120": 165.00,
+            "60x120": 206.00,
+            "48x96": 132.00,
+            "60x96": 165.00
+          },
+          "cut_rate_per_inch": 0.16
+        },
+        {
+          "label": "16ga",
+          "thickness_in": 0.0598,
+          "sheets": {
+            "48x120": 195.00,
+            "60x120": 244.00,
+            "48x96": 156.00,
+            "60x96": 195.00
+          },
+          "cut_rate_per_inch": 0.18
+        },
+        {
+          "label": "14ga",
+          "thickness_in": 0.0747,
+          "sheets": {
+            "48x120": 240.00,
+            "60x120": 300.00,
+            "48x96": 192.00,
+            "60x96": 240.00
+          },
+          "cut_rate_per_inch": 0.22
+        }
+      ]
+    },
+    {
+      "name": "Copper",
+      "gauges": [
+        {
+          "label": "20ga",
+          "thickness_in": 0.032,
+          "sheets": {
+            "48x120": 280.00,
+            "60x120": 350.00,
+            "48x96": 224.00,
+            "60x96": 280.00
+          },
+          "cut_rate_per_inch": 0.15
+        },
+        {
+          "label": "18ga",
+          "thickness_in": 0.040,
+          "sheets": {
+            "48x120": 340.00,
+            "60x120": 425.00,
+            "48x96": 272.00,
+            "60x96": 340.00
+          },
+          "cut_rate_per_inch": 0.18
+        },
+        {
+          "label": "16ga",
+          "thickness_in": 0.051,
+          "sheets": {
+            "48x120": 420.00,
+            "60x120": 525.00,
+            "48x96": 336.00,
+            "60x96": 420.00
+          },
+          "cut_rate_per_inch": 0.22
+        }
+      ]
+    }
+  ],
+  "bend_cost_per_bend": 0.75,
+  "setup_fees": {
+    "new_part_no_bending": 150.00,
+    "new_part_with_bending": 250.00,
+    "repeat_no_bending": 50.00,
+    "repeat_with_bending": 75.00
+  },
+  "nesting": {
+    "kerf_spacing_inches": 0.25,
+    "sheet_sizes": [
+      { "label": "4' × 10'", "width": 48, "height": 120 },
+      { "label": "5' × 10'", "width": 60, "height": 120 },
+      { "label": "4' × 8'", "width": 48, "height": 96 },
+      { "label": "5' × 8'", "width": 60, "height": 96 }
+    ]
+  },
+  "estimate_range": {
+    "low_multiplier": 0.90,
+    "high_multiplier": 1.15
+  }
+}
