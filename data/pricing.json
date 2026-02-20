@@ -261,5 +261,27 @@
   "estimate_range": {
     "low_multiplier": 0.90,
     "high_multiplier": 1.15
+  },
+  "commodity_config": {
+    "Steel": {
+      "symbol": "STEEL-HR",
+      "baseline_usd_per_lb": 0.35,
+      "sensitivity": 0.60
+    },
+    "Aluminum": {
+      "symbol": "LME-ALU",
+      "baseline_usd_per_lb": 1.15,
+      "sensitivity": 0.60
+    },
+    "Stainless Steel": {
+      "symbol": "LME-NI",
+      "baseline_usd_per_lb": 7.50,
+      "sensitivity": 0.15
+    },
+    "Copper": {
+      "symbol": "LME-XCU",
+      "baseline_usd_per_lb": 4.00,
+      "sensitivity": 0.70
+    }
   }
 }

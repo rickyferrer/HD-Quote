@@ -47,6 +47,11 @@ export default function Home() {
   const [manualReview, setManualReview] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [livePricing, setLivePricing] = useState<{
+    active: boolean;
+    asOfDate?: string;
+    source?: string;
+  } | undefined>(undefined);
 
   const handleFileLoaded = (
     file: File,
@@ -110,6 +115,7 @@ export default function Home() {
         setEstimate(data.estimate);
       }
       setManualReview(data.manualReview ?? false);
+      setLivePricing(data.livePricing);
       setStep(4);
     } catch {
       setSubmitError('Network error. Please check your connection and try again.');
@@ -278,6 +284,7 @@ export default function Home() {
               quantity={quantity}
               email={email}
               manualReview={manualReview}
+              livePricing={livePricing}
             />
           )}
         </div>

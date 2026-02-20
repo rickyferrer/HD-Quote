@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { parseDxfContent } from '@/lib/dxf-parser';
 import { calculateEstimate } from '@/lib/pricing';
+import { getLivePrices, applyLivePricing } from '@/lib/metals-api';
 import { sendCustomerConfirmation, sendInternalNotification } from '@/lib/email';
 import type { QuoteSubmission, QuoteResponse, PricingData, ParsedDxf } from '@/lib/types';
 import pricingDataJson from '@/data/pricing.json';
 
-const pricingData = pricingDataJson as PricingData;
+const basePricingData = pricingDataJson as PricingData;
 
 // Simple in-memory rate limiting
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
@@ -94,6 +95,12 @@ export async function POST(request: NextRequest) {
     let estimate = null;
     let manualReview = false;
 
+    // Attempt to fetch live commodity prices and adjust sheet costs
+    const livePrices = basePricingData.commodity_config
+      ? await getLivePrices(basePricingData.commodity_config)
+      : null;
+    const pricingData = applyLivePricing(basePricingData, livePrices);
+
     if (effectiveDxf && effectiveDxf.boundingBox.width > 0 && effectiveDxf.boundingBox.height > 0) {
       try {
         estimate = calculateEstimate(
@@ -149,6 +156,11 @@ export async function POST(request: NextRequest) {
         ? 'Your quote request has been received. Our team will review your file and provide a detailed quote.'
         : 'Your quote request has been received!',
       manualReview,
+      livePricing: {
+        active: livePrices !== null,
+        asOfDate: livePrices?.asOfDate,
+        source: livePrices?.source,
+      },
     };
 
     return NextResponse.json(response);

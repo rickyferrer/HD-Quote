@@ -43,6 +43,12 @@ export interface EstimateRange {
   high_multiplier: number;
 }
 
+export interface CommodityConfig {
+  symbol: string;
+  baseline_usd_per_lb: number;
+  sensitivity: number;
+}
+
 export interface PricingData {
   _comment?: string;
   materials: MaterialOption[];
@@ -50,6 +56,25 @@ export interface PricingData {
   setup_fees: SetupFees;
   nesting: NestingConfig;
   estimate_range: EstimateRange;
+  commodity_config?: Record<string, CommodityConfig>;
+}
+
+// Live metal pricing types
+
+export interface MetalPriceCache {
+  result: LivePriceResult;
+  fetchedAt: number;
+}
+
+export interface LivePriceResult {
+  /** Per-material multiplier to apply to sheet prices */
+  adjustments: Record<string, number>;
+  /** Spot price in USD/lb per material (for display) */
+  spotPrices: Record<string, number>;
+  /** Date the prices reflect (YYYY-MM-DD) */
+  asOfDate: string;
+  /** Data source attribution */
+  source: string;
 }
 
 // DXF-related types
@@ -163,4 +188,9 @@ export interface QuoteResponse {
   estimate?: QuoteEstimate;
   message: string;
   manualReview?: boolean;
+  livePricing?: {
+    active: boolean;
+    asOfDate?: string;
+    source?: string;
+  };
 }

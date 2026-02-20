@@ -11,6 +11,11 @@ interface EstimateResultProps {
   quantity: number;
   email: string;
   manualReview?: boolean;
+  livePricing?: {
+    active: boolean;
+    asOfDate?: string;
+    source?: string;
+  };
 }
 
 function formatCurrency(amount: number): string {
@@ -25,6 +30,7 @@ export default function EstimateResult({
   quantity,
   email,
   manualReview,
+  livePricing,
 }: EstimateResultProps) {
   return (
     <div className="space-y-8">
@@ -82,6 +88,12 @@ export default function EstimateResult({
               {formatCurrency(estimate.totalRangeHigh)}
             </p>
           </div>
+          {livePricing?.active && (
+            <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-center gap-2 text-xs text-blue-200">
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              Live market pricing as of {livePricing.asOfDate}
+            </div>
+          )}
         </div>
       ) : (
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
